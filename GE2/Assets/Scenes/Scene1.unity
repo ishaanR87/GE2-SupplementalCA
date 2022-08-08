@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7584822000608053182, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_Name
-      value: StarSparrow17 (1)
+      value: Eclipse
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_RootOrder
@@ -140,7 +140,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.18
+      value: 14.73
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_LocalPosition.y
@@ -148,35 +148,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -17.2
+      value: -19.55
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6727437
+      value: 0.71226925
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.72458524
+      value: 0.6857699
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.1494581
+      value: -0.14963683
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0073812255
+      value: 0.0010008679
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 76.585
+      value: 77.743
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -114.096
+      value: -86.041
       objectReference: {fileID: 0}
     - target: {fileID: 7584822000608053185, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -102.485
+      value: -73.741
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
@@ -367,7 +367,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1093813972544782, guid: 4a40092bbc207004fa51b938b96005eb, type: 3}
       propertyPath: m_Name
-      value: StarSparrow4
+      value: Phoenix
       objectReference: {fileID: 0}
     - target: {fileID: 4578466178321354, guid: 4a40092bbc207004fa51b938b96005eb, type: 3}
       propertyPath: m_RootOrder
