@@ -185,7 +185,23 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7584822000608053182, guid: 58734c41594668840bd3847f2b5ce512, type: 3}
   m_PrefabInstance: {fileID: 482494758}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &175792476
+--- !u!54 &175792478
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 175792475}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &175792480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -194,7 +210,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 175792475}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62bf3d2eecf57b24f98bf0c1a6bc4d7e, type: 3}
+  m_Script: {fileID: 11500000, guid: babd1c469827bc143861fdfabace5ad4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
@@ -213,33 +229,17 @@ MonoBehaviour:
   slowingDistance: 80
   path: {fileID: 1504792283}
   pathFollowingEnabled: 1
-  waypointDistance: 2
+  waypointDistance: 3
   banking: 0.1
   damping: 0.1
   playerSteeringEnabled: 0
   steeringForce: 100
   pursueEnabled: 0
-  pursueTarget: {fileID: 529896586}
+  pursueTarget: {fileID: 0}
   pursueTargetPos: {x: 0, y: 0, z: 0}
   offsetPursueEnabled: 0
   leader: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
---- !u!54 &175792478
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 175792475}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &332643361
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +364,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 132480, guid: d0ba74bc4033d3748a26e8aed52fb490, type: 3}
       propertyPath: m_Name
-      value: Planet_Ring_D1
+      value: Luna-Ring
       objectReference: {fileID: 0}
     - target: {fileID: 442902, guid: d0ba74bc4033d3748a26e8aed52fb490, type: 3}
       propertyPath: m_RootOrder
@@ -424,6 +424,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0ba74bc4033d3748a26e8aed52fb490, type: 3}
+--- !u!1 &466360882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 114230, guid: e47bb2f50258ed841b48fa1eef455833, type: 3}
+  m_PrefabInstance: {fileID: 1661664858}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &466360886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 466360882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f89e94fffa4d4440863631bf252a37c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &482494758
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -486,45 +503,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1093813972544782, guid: 4a40092bbc207004fa51b938b96005eb, type: 3}
   m_PrefabInstance: {fileID: 1725048338}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &529896586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529896585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62bf3d2eecf57b24f98bf0c1a6bc4d7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  velocity: {x: 0, y: 0, z: 0}
-  speed: 0
-  acceleration: {x: 0, y: 0, z: 0}
-  force: {x: 0, y: 0, z: 0}
-  maxSpeed: 6
-  maxForce: 10
-  mass: 1
-  seekEnabled: 0
-  seekTargetTransform: {fileID: 0}
-  seekTarget: {x: 0, y: 0, z: 0}
-  arriveEnabled: 0
-  arriveTargetTransform: {fileID: 0}
-  arriveTarget: {x: 0, y: 0, z: 0}
-  slowingDistance: 80
-  path: {fileID: 1504792283}
-  pathFollowingEnabled: 1
-  waypointDistance: 2
-  banking: 0.1
-  damping: 0.1
-  playerSteeringEnabled: 0
-  steeringForce: 100
-  pursueEnabled: 0
-  pursueTarget: {fileID: 0}
-  pursueTargetPos: {x: 0, y: 0, z: 0}
-  offsetPursueEnabled: 0
-  leader: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
 --- !u!54 &529896588
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -541,6 +519,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &529896590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 529896585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babd1c469827bc143861fdfabace5ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  speed: 0
+  acceleration: {x: 0, y: 0, z: 0}
+  force: {x: 0, y: 0, z: 0}
+  maxSpeed: 5
+  maxForce: 10
+  mass: 1
+  seekEnabled: 0
+  seekTargetTransform: {fileID: 0}
+  seekTarget: {x: 0, y: 0, z: 0}
+  arriveEnabled: 0
+  arriveTargetTransform: {fileID: 0}
+  arriveTarget: {x: 0, y: 0, z: 0}
+  slowingDistance: 80
+  path: {fileID: 1504792283}
+  pathFollowingEnabled: 1
+  waypointDistance: 3
+  banking: 0.1
+  damping: 0.1
+  playerSteeringEnabled: 0
+  steeringForce: 100
+  pursueEnabled: 0
+  pursueTarget: {fileID: 0}
+  pursueTargetPos: {x: 0, y: 0, z: 0}
+  offsetPursueEnabled: 0
+  leader: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &590068081
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +748,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -191.287, z: 0}
 --- !u!114 &705507996
 MonoBehaviour:
@@ -977,7 +994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4579553980399578, guid: f603e71ddc270d54192200e95673e2a6, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4579553980399578, guid: f603e71ddc270d54192200e95673e2a6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1070,7 +1087,7 @@ Transform:
   - {fileID: 590068082}
   - {fileID: 923452016}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1661664858
 PrefabInstance:
@@ -1081,7 +1098,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 114230, guid: e47bb2f50258ed841b48fa1eef455833, type: 3}
       propertyPath: m_Name
-      value: Gas_Planet_G
+      value: Luna
       objectReference: {fileID: 0}
     - target: {fileID: 460240, guid: e47bb2f50258ed841b48fa1eef455833, type: 3}
       propertyPath: m_RootOrder
@@ -1154,7 +1171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4578466178321354, guid: 4a40092bbc207004fa51b938b96005eb, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4578466178321354, guid: 4a40092bbc207004fa51b938b96005eb, type: 3}
       propertyPath: m_LocalPosition.x
