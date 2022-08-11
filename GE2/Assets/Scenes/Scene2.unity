@@ -468,7 +468,7 @@ MonoBehaviour:
   speed: 0
   acceleration: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
-  maxSpeed: 20
+  maxSpeed: 10
   maxForce: 10
   mass: 1
   seekEnabled: 0
@@ -507,11 +507,11 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   scale: 4
-  forwardFeelerDepth: 50
-  sideFeelerDepth: 40
+  forwardFeelerDepth: 30
+  sideFeelerDepth: 30
   frontFeelerUpdatesPerSecond: 20
   sideFeelerUpdatesPerSecond: 20
-  feelerRadius: 30
+  feelerRadius: 20
   forceType: 0
   mask:
     serializedVersion: 2
@@ -528,15 +528,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a4f12fa920bda4f8d8c36519b02662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  behaviours: []
-  force: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
-  velocity: {x: 0, y: 0, z: 0}
-  mass: 1
-  damping: 0.01
-  banking: 0.1
-  maxSpeed: 5
-  maxForce: 10
 --- !u!1 &560850390
 GameObject:
   m_ObjectHideFlags: 0
@@ -1032,7 +1023,7 @@ MonoBehaviour:
   speed: 0
   acceleration: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
-  maxSpeed: 20
+  maxSpeed: 10
   maxForce: 10
   mass: 1
   seekEnabled: 0
@@ -1071,11 +1062,11 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   scale: 4
-  forwardFeelerDepth: 50
-  sideFeelerDepth: 40
-  frontFeelerUpdatesPerSecond: 10
-  sideFeelerUpdatesPerSecond: 5
-  feelerRadius: 30
+  forwardFeelerDepth: 30
+  sideFeelerDepth: 30
+  frontFeelerUpdatesPerSecond: 20
+  sideFeelerUpdatesPerSecond: 20
+  feelerRadius: 20
   forceType: 0
   mask:
     serializedVersion: 2
@@ -1092,15 +1083,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52a4f12fa920bda4f8d8c36519b02662, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  behaviours: []
-  force: {x: 0, y: 0, z: 0}
-  acceleration: {x: 0, y: 0, z: 0}
-  velocity: {x: 0, y: 0, z: 0}
-  mass: 1
-  damping: 0.01
-  banking: 0.1
-  maxSpeed: 5
-  maxForce: 10
 --- !u!1 &1263877954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1486,6 +1468,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: -5.798, y: -62.818, z: -80.293}
+--- !u!1 &1669836767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7130293731035720816, guid: 0daf96c15d4c97b4e9e526f6acfce2f0, type: 3}
+  m_PrefabInstance: {fileID: 2122392476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1669836771
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669836767}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1722429414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1931,8 +1934,8 @@ Rigidbody:
   m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
