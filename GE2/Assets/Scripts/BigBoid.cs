@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShipBehaviour : MonoBehaviour
+public class BigBoid : MonoBehaviour
 {
     
     public Vector3 velocity;
@@ -36,17 +36,17 @@ public class ShipBehaviour : MonoBehaviour
     public float steeringForce = 100;
 
     public bool pursueEnabled = false;
-    public ShipBehaviour pursueTarget;
+    public BigBoid pursueTarget;
 
     public Vector3 pursueTargetPos; 
 
     public bool offsetPursueEnabled = false;
-    public ShipBehaviour leader;
+    public BigBoid leader;
     public Vector3 offset;
     private Vector3 worldTarget;
     private Vector3 targetPos;
 
-    public Vector3 Pursue(ShipBehaviour pursueTarget)
+    public Vector3 Pursue(BigBoid pursueTarget)
     {
         float dist = Vector3.Distance(pursueTarget.transform.position, transform.position);
         float time = dist / maxSpeed;
@@ -81,7 +81,7 @@ public class ShipBehaviour : MonoBehaviour
 
     }
 
-    public Vector3 OffsetPursue(ShipBehaviour leader)
+    public Vector3 OffsetPursue(BigBoid leader)
     {
         // This is a bug!!
         //worldTarget = leader.transform.TransformPoint(offset);
