@@ -157,7 +157,7 @@ MonoBehaviour:
   - {x: -80, y: 7, z: -14}
   - {x: -63, y: 1, z: -33.000004}
   - {x: -24, y: -5, z: 19}
-  - {x: -57, y: 21, z: 67}
+  - {x: -57, y: 21, z: 73}
   current: 0
   isLooped: 1
 --- !u!4 &20490612
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 371226468}
   - component: {fileID: 371226467}
   m_Layer: 0
-  m_Name: Sphere (3)
+  m_Name: waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -389,6 +389,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Blueship1
       objectReference: {fileID: 0}
+    - target: {fileID: 1641971311212662, guid: fb80d574ec67a7c4e8ef1a14a65990f6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 4889076547100212, guid: fb80d574ec67a7c4e8ef1a14a65990f6, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -452,7 +456,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1641971311212662, guid: fb80d574ec67a7c4e8ef1a14a65990f6, type: 3}
   m_PrefabInstance: {fileID: 551470102}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &551470104
+--- !u!114 &551470111
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -468,7 +472,46 @@ MonoBehaviour:
   speed: 0
   acceleration: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
-  maxSpeed: 15
+  maxSpeed: 10
+  maxForce: 10
+  mass: 1
+  seekEnabled: 0
+  seekTargetTransform: {fileID: 0}
+  seekTarget: {x: 0, y: 0, z: 0}
+  arriveEnabled: 0
+  arriveTargetTransform: {fileID: 0}
+  arriveTarget: {x: 0, y: 0, z: 0}
+  slowingDistance: 80
+  path: {fileID: 0}
+  pathFollowingEnabled: 0
+  waypointDistance: 3
+  banking: 0.1
+  damping: 0.1
+  playerSteeringEnabled: 0
+  steeringForce: 100
+  pursueEnabled: 0
+  pursueTarget: {fileID: 0}
+  pursueTargetPos: {x: 0, y: 0, z: 0}
+  offsetPursueEnabled: 0
+  leader: {fileID: 0}
+  offset: {x: 0, y: 0, z: 0}
+--- !u!114 &551470112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551470103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: babd1c469827bc143861fdfabace5ad4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  speed: 0
+  acceleration: {x: 0, y: 0, z: 0}
+  force: {x: 0, y: 0, z: 0}
+  maxSpeed: 10
   maxForce: 10
   mass: 1
   seekEnabled: 0
@@ -491,43 +534,6 @@ MonoBehaviour:
   offsetPursueEnabled: 0
   leader: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
---- !u!114 &551470105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551470103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b33ec7be9ee619f4b887fdd5606112b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 1
-  force: {x: 0, y: 0, z: 0}
-  boid: {fileID: 0}
-  scale: 4
-  forwardFeelerDepth: 30
-  sideFeelerDepth: 30
-  frontFeelerUpdatesPerSecond: 20
-  sideFeelerUpdatesPerSecond: 20
-  feelerRadius: 20
-  forceType: 0
-  mask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &551470106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 551470103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a4f12fa920bda4f8d8c36519b02662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &560850390
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +547,7 @@ GameObject:
   - component: {fileID: 560850393}
   - component: {fileID: 560850392}
   m_Layer: 0
-  m_Name: Sphere (3)
+  m_Name: waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -638,7 +644,7 @@ GameObject:
   - component: {fileID: 765386943}
   - component: {fileID: 765386942}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -861,7 +867,7 @@ GameObject:
   - component: {fileID: 955836247}
   - component: {fileID: 955836246}
   m_Layer: 0
-  m_Name: Sphere (4)
+  m_Name: waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1007,7 +1013,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1970447681998018, guid: 4d54efa43b03b1845b929768cf25e790, type: 3}
   m_PrefabInstance: {fileID: 1115243442}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1115243444
+--- !u!114 &1115243451
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1023,7 +1029,7 @@ MonoBehaviour:
   speed: 0
   acceleration: {x: 0, y: 0, z: 0}
   force: {x: 0, y: 0, z: 0}
-  maxSpeed: 15
+  maxSpeed: 10
   maxForce: 10
   mass: 1
   seekEnabled: 0
@@ -1035,7 +1041,7 @@ MonoBehaviour:
   slowingDistance: 80
   path: {fileID: 765532081}
   pathFollowingEnabled: 1
-  waypointDistance: 4
+  waypointDistance: 5
   banking: 0.1
   damping: 0.1
   playerSteeringEnabled: 0
@@ -1046,43 +1052,6 @@ MonoBehaviour:
   offsetPursueEnabled: 0
   leader: {fileID: 0}
   offset: {x: 0, y: 0, z: 0}
---- !u!114 &1115243445
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115243443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b33ec7be9ee619f4b887fdd5606112b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weight: 1
-  force: {x: 0, y: 0, z: 0}
-  boid: {fileID: 0}
-  scale: 4
-  forwardFeelerDepth: 30
-  sideFeelerDepth: 30
-  frontFeelerUpdatesPerSecond: 20
-  sideFeelerUpdatesPerSecond: 20
-  feelerRadius: 20
-  forceType: 0
-  mask:
-    serializedVersion: 2
-    m_Bits: 4294967295
---- !u!114 &1115243446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1115243443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52a4f12fa920bda4f8d8c36519b02662, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1263877954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1065,7 @@ GameObject:
   - component: {fileID: 1263877957}
   - component: {fileID: 1263877956}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1193,7 +1162,7 @@ GameObject:
   - component: {fileID: 1427492112}
   - component: {fileID: 1427492111}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1290,7 +1259,7 @@ GameObject:
   - component: {fileID: 1597798294}
   - component: {fileID: 1597798293}
   m_Layer: 0
-  m_Name: Sphere (4)
+  m_Name: waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1304,7 +1273,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597798291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.850693, y: -13.106277, z: 29.712376}
+  m_LocalPosition: {x: 29.850693, y: -13.106277, z: 35.712376}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1502,7 +1471,7 @@ GameObject:
   - component: {fileID: 1722429417}
   - component: {fileID: 1722429416}
   m_Layer: 0
-  m_Name: Sphere (2)
+  m_Name: waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1599,7 +1568,7 @@ GameObject:
   - component: {fileID: 1772728135}
   - component: {fileID: 1772728134}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1696,7 +1665,7 @@ GameObject:
   - component: {fileID: 1860981090}
   - component: {fileID: 1860981089}
   m_Layer: 0
-  m_Name: Sphere (1)
+  m_Name: waypoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1918,24 +1887,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0daf96c15d4c97b4e9e526f6acfce2f0, type: 3}
---- !u!1 &2122392477 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8307603157612568338, guid: 0daf96c15d4c97b4e9e526f6acfce2f0, type: 3}
-  m_PrefabInstance: {fileID: 2122392476}
-  m_PrefabAsset: {fileID: 0}
---- !u!54 &2122392478
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2122392477}
-  serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
