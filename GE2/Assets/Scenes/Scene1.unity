@@ -685,14 +685,14 @@ MonoBehaviour:
   arriveTarget: {x: 0, y: 0, z: 0}
   slowingDistance: 80
   path: {fileID: 1504792283}
-  pathFollowingEnabled: 1
+  pathFollowingEnabled: 0
   waypointDistance: 3
   banking: 0.1
   damping: 0.1
   playerSteeringEnabled: 0
   steeringForce: 100
-  pursueEnabled: 0
-  pursueTarget: {fileID: 0}
+  pursueEnabled: 1
+  pursueTarget: {fileID: 529896590}
   pursueTargetPos: {x: 0, y: 0, z: 0}
   offsetPursueEnabled: 0
   leader: {fileID: 0}
@@ -1358,14 +1358,14 @@ MonoBehaviour:
   arriveTarget: {x: 0, y: 0, z: 0}
   slowingDistance: 80
   path: {fileID: 1504792283}
-  pathFollowingEnabled: 1
+  pathFollowingEnabled: 0
   waypointDistance: 3
   banking: 0.1
   damping: 0.1
   playerSteeringEnabled: 0
   steeringForce: 100
-  pursueEnabled: 0
-  pursueTarget: {fileID: 0}
+  pursueEnabled: 1
+  pursueTarget: {fileID: 529896590}
   pursueTargetPos: {x: 0, y: 0, z: 0}
   offsetPursueEnabled: 0
   leader: {fileID: 0}
