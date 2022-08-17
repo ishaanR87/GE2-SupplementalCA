@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AsteroidSpawner : MonoBehaviour
 {
-    public GameObject[] asteroidObjects;
+    // public GameObject[] asteroidObjects;
 
+    public Transform asteroidPrefab;
     public int NoOfAsteroids = 10;
-
     public float minSpawn = -500;
     public float maxSpawn = 500;
 
@@ -28,8 +28,11 @@ public class AsteroidSpawner : MonoBehaviour
         Vector3 randomSpawnPoint = 
             new Vector3(transform.position.x + randomX, transform.position.y + randomY, transform.position.z + randomZ);
 
-        GameObject tempObj = Instantiate(asteroidObjects[0], randomSpawnPoint, Quaternion.identity);
-        tempObj.transform.parent = this.transform;
+       // Transform tempObj = Instantiate(asteroidPrefab, randomSpawnPoint, Random.rotation);
+       // tempObj.transform.parent = this.transform;
+
+       Transform temp = Instantiate(asteroidPrefab, randomSpawnPoint, Random.rotation);
+       temp.localScale = temp.localScale * Random.Range(0.5f,2f);
     }
 }
 
