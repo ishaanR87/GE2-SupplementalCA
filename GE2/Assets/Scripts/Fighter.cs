@@ -9,7 +9,7 @@ public class Fighter : MonoBehaviour
     
     public GameObject bullet;
     public GameObject enemy;
-    public TMPro.TextMeshPro text;
+
 
     void Start()
     {
