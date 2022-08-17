@@ -5,7 +5,7 @@ using UnityEngine;
 public class AsteroidMovement : MonoBehaviour
 {
     public float minSpinSpeed = 0.2f;
-    public float maxSpinSpeed = 1f;
+    public float maxSpinSpeed = 3f;
     public float minThrust = 0.1f;
     public float maxThrust = 0.5f;
     private float spinSpeed;
