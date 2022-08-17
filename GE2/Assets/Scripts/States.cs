@@ -7,7 +7,7 @@ class PatrolState : State
 {
     public override void Enter()
     {
-        owner.GetComponent<FollowPath>().enabled = true;
+        owner.GetComponent<Fighter>().enabled = true;
     }
 
     public override void Think()
@@ -18,11 +18,6 @@ class PatrolState : State
         {
             owner.ChangeState(new DefendState());
         }
-    }
-
-    public override void Exit()
-    {
-        owner.GetComponent<FollowPath>().enabled = false;
     }
 }
 
