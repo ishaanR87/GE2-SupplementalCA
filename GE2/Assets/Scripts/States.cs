@@ -7,17 +7,22 @@ class PatrolState : State
 {
     public override void Enter()
     {
-        owner.GetComponent<Fighter>().enabled = true;
+        owner.GetComponent<FollowPath>().enabled = true;
     }
 
     public override void Think()
     {
         if (Vector3.Distance(
             owner.GetComponent<Fighter>().enemy.transform.position,
-            owner.transform.position) < 1000)
+            owner.transform.position) < 10)
         {
             owner.ChangeState(new DefendState());
         }
+    }
+
+    public override void Exit()
+    {
+        owner.GetComponent<FollowPath>().enabled = false;
     }
 }
 
@@ -119,6 +124,12 @@ public class Alive:State
             owner.SetGlobalState(dead);
             return;
         }
+       
+        if (owner.GetComponent<Fighter>().ammo <= 0)
+        {
+            owner.ChangeState(new FindAmmo());
+            return;
+        }
     }
 }
 
@@ -133,4 +144,47 @@ public class Dead:State
         }
         owner.GetComponent<StateMachine>().enabled = false;        
     }         
+}
+
+public class FindAmmo:State
+{
+    Transform ammo;
+    public override void Enter()
+    {
+        GameObject[] ammos = GameObject.FindGameObjectsWithTag("ammo");
+        // Find the closest ammo;
+        Transform closest = ammos[0].transform;
+        foreach(GameObject go in ammos)
+        {
+            if (Vector3.Distance(go.transform.position, owner.transform.position) <
+                Vector3.Distance(closest.position, owner.transform.position))
+                {
+                    closest = go.transform;
+                }
+        }
+        ammo = closest;
+        owner.GetComponent<Seek>().targetGameObject = ammo.gameObject;
+        owner.GetComponent<Seek>().enabled = true;
+    }
+
+    public override void Think()
+    {
+        // If the other guy already took tghe ammo
+        if (ammo == null)
+        {
+            owner.ChangeState(new FindAmmo());
+            return;
+        }
+        if (Vector3.Distance(owner.transform.position, ammo.position) < 1)
+        {
+            owner.GetComponent<Fighter>().ammo += 10;
+            owner.RevertToPreviousState();
+            GameObject.Destroy (ammo.gameObject);
+        }
+    }
+
+    public override void Exit()
+    {
+        owner.GetComponent<Seek>().enabled = false;
+    }
 }
