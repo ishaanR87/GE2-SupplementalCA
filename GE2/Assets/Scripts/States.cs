@@ -14,7 +14,7 @@ class PatrolState : State
     {
         if (Vector3.Distance(
             owner.GetComponent<Fighter>().enemy.transform.position,
-            owner.transform.position) < 10)
+            owner.transform.position) < 1000)
         {
             owner.ChangeState(new DefendState());
         }
@@ -151,7 +151,7 @@ public class FindAmmo:State
     Transform ammo;
     public override void Enter()
     {
-        GameObject[] ammos = GameObject.FindGameObjectsWithTag("ammo");
+        GameObject[] ammos = GameObject.FindGameObjectsWithTag("Ammo");
         // Find the closest ammo;
         Transform closest = ammos[0].transform;
         foreach(GameObject go in ammos)

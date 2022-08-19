@@ -20,7 +20,7 @@ public class AmmoSpawner : MonoBehaviour
     {
         while(true)
         {
-            GameObject[] ammos = GameObject.FindGameObjectsWithTag("ammo");
+            GameObject[] ammos = GameObject.FindGameObjectsWithTag("Ammo");
             if (ammos.Length < total)
             {
                 GameObject a = GameObject.Instantiate(ammo);
