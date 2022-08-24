@@ -4,14 +4,36 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 20;
+    public float speed = 200f;
+    public GameObject target = null;
+    // Start is called before the first frame update
+    public GameObject explosion;
     void Start()
     {
-        Destroy(this.gameObject, 5);
+
     }
 
+    // Update is called once per frame
     void Update()
     {
-        transform.Translate(0, 0, speed * Time.deltaTime);
+        //move towards the target
+        if(target != null)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speed * Time.deltaTime);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    
+        //once it is reached, delete the bullet
+        if (transform.position == target.transform.position)
+        {
+            Destroy(this.gameObject);
+            //lose hp
+            target.GetComponent<BlueShip>().health -= 5;
+            print(target.GetComponent<BlueShip>().health);
+        }
+
     }
 }

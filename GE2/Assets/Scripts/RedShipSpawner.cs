@@ -5,7 +5,7 @@ using UnityEngine;
 public class RedShipSpawner : MonoBehaviour {
 
     public float gap = 20;
-    public float followers = 2;
+    public float followers = 1;
     public GameObject prefab;
 
     private void Start()

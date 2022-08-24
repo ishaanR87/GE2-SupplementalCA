@@ -5,15 +5,16 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
-  - Bullet
-  - Ammo
   - BlueTeam
   - RedTeam
+  - Explosion
+  - Bullet
+  - DestroyedObjects
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Obstacles
   - Water
   - UI
   - 
