@@ -63,7 +63,7 @@ public class RedShipAttack : MonoBehaviour
         if (BlueShips.Length == 0)
         {
             //load next scene
-            SceneManager.LoadScene("Scene2");
+            SceneManager.LoadScene("Scene5");
         }
     }
 
