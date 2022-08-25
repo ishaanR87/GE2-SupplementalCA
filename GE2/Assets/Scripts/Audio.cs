@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
  
-public class BGMusic : MonoBehaviour
+public class Audio : MonoBehaviour
 {
-    public static BGMusic instance;
+    public static Audio instance;
  
     void Awake()
     {
