@@ -10,17 +10,19 @@ public class SateliteExplosion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        StartCoroutine(waiter());
     }
-
+    
+    
     // Update is called once per frame
-    void Update()
-    {
-            Destroy(this.gameObject);
-            explosion = Resources.Load("Explosion") as GameObject;
-            explosion = GameObject.Instantiate(this.explosion);
-            explosion.transform.position = this.transform.position;
-            Destroy(explosion, 2f);   
+    IEnumerator waiter()
+    {   
+        yield return new WaitForSeconds(4);
+        Destroy(this.gameObject);
+        explosion = Resources.Load("BigExplosion") as GameObject;
+        explosion = GameObject.Instantiate(this.explosion);
+        explosion.transform.position = this.transform.position;
+        Destroy(explosion, 2f);   
     }
     
 }
