@@ -17,7 +17,7 @@ public class SateliteExplosion : MonoBehaviour
     // Update is called once per frame
     IEnumerator waiter()
     {   
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(8);
         Destroy(this.gameObject);
         explosion = Resources.Load("BigExplosion") as GameObject;
         explosion = GameObject.Instantiate(this.explosion);
