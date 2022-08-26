@@ -140,6 +140,6 @@ I am proud of how the scenes are stitched together in the form of "mini-movie". 
 ## Youtube Video
 **Demo**:
 
-[![YouTube](https://youtu.be/45JJ6q_rJ1k)
+[![Space Battle Blue vs Red](https://img.youtube.com/vi/45JJ6q_rJ1k/default.jpg)](https://youtu.be/45JJ6q_rJ1k)
 
 
